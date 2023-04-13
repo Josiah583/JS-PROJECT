@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/a4a85c575a.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="bg-slate-100 flex space-x-56 ">
+        <div>
+            <img width="150px" height="150px" src="./Assets/hotle_logo1-removebg-preview (1).png" alt="">
+        </div>
+        <div class="flex pt-8 pl-20 justify-between items-center ">
+            <p class="text-4xl">Welcome back,</p>
+
+            <p id="id"
+                class="w-20 h-20 rounded-full bg-blue-300 justify-center border-2 border-white pl-2 text-6xl items-center justify-center ml-5">
+
+            </p>
+
+        </div>
+
+        <div class="pt-12 ml-72"><input class="border-2 text-black-900" type="text" placeholder="search"></div>
+
+
+    </div>
+    <!--<div class="flex justify-center"> <p> Your current available rooms and dasboard</p></div> -->
+
+
+    <div class="flex">
+        <div class=" bg-slate-600 w-50 border-r-2 p-6 h-full">
+            <aside class=" mt-10 pl-4 space-y-10">
+                <div id="hi" class="flex space-x-2 items-center text-white"><i class="fa-solid fa-house-laptop"></i>
+                    <p>LoginDasbord</p>
+                </div>
+                <div id="btnRooms" class="flex space-x-2 items-center text-white"><i
+                        class="fa-solid fa-house-laptop"></i>
+                    <p id="room">Rooms</p>
+                </div>
+                <div id="reserves" class="flex space-x-2 items-center text-white"><i
+                        class="fa-solid fa-tower-observation"></i>
+                    <p>Reservation</p>
+                </div>
+                <div class="flex space-x-2 pt-16 items-center text-white"><i class="fa-solid fa-users"></i>
+                    <p id="add">Add Room</p>
+                </div>
+                <div class="flex space-x-2 items-center text-white"><i class="fa-regular fa-chart-simple"></i>
+                    <p>Charts</p>
+                </div>
+
+                <div></div>
+            </aside>
+        </div>
+        <div id="cardCase" class="grid sm:grid-cols-1 gap-10 md:grid-cols-4  w-full h-96 pl-0">
+            <!--<div class="w-56 h-70 space-y-5 bg-teal-900">
+                <div class="bg-slate-300">
+                    <h2 class="text-2xl text-semibold font-bold text-center">Guest Room</h2>
+                </div>
+                <div class="ml-4 text-white ">
+                    <p>Standard Room</p>
+                </div>
+                <div class="ml-4 text-white ">
+                    <p>$50 per night</p>
+                </div>
+                <div class="ml-4 text-white ">
+                    <p>Air conditioning</p>
+                </div>
+                <div class="ml-4 text-white ">
+                    <p>Mini fridge</p>
+                </div>
+                <div class="ml-4 text-white ">
+                    <p>24 Hours Service</p>
+                </div>
+                <div class="ml-4 text-white ">
+                    <p>Radio</p>
+                </div>
+                <div class="ml-4 text-white ">
+                    <p>Phones</p>
+                </div> -->
+        </div>
+
+
+
+
+    </div>
+
+    </div>
+
+    <div>
+
+    </div>
+
+    <form id="form" action="" class="absolute hidden  p-5 w-90 bg-slate-100 top-0 right-0">
+        <div class="w-full mx-5">
+            <label for="title">Room Type</label>
+            <input class="rounded-md p-5 border-2 border-blue-500" type="textarea" name="title">
+        </div>
+        <div class="w-full mx-5">
+            <label for="title">Description</label>
+            <input class="rounded-md p-5 border-2 border-blue-500" type="textarea" placeholder="Add room description"
+                name="desc" id=>
+        </div>
+        <div class="w-full mx-5">
+            <label for="title">Booked</label>
+            <input class="rounded-md p-5 border-2 border-blue-500" type="textarea" name="title">
+        </div>
+        <div class="w-full mx-5">
+            <label for="title">Data</label>
+            <input type="text" name="desc" name="date" type="date">
+        </div>
+        <div class="w-full mx-5">
+            <input id="formadd" class="bg-blue-300 text-white text-2xl p-5" type="Add Room" name="desc"
+                value="Create Room">
+        </div>
+    </form>
+
+
+    <form id="formA" action="" class="absolute hidden p-5 w-90 bg-slate-100 top-0 mx-96 my-36 space-y-5">
+
+        
+        </div>
+        <div>
+            <label for="title">Email</label><br>
+            <input class="rounded-md w-56 w-full p-2 border-2 border-brown-900" type="textarea"
+                placeholder="Enter your Email" name="desc" id="">
+        </div>
+        <div>
+            <label for="title">Password</label><br>
+            <input class="rounded-md w-full p-2 border-2 border-brown-900" type="textarea"
+                placeholder="Enter your Password" name="desc" id="">
+        </div>
+        <div class="bg-blue-600 p-3 rounded-md rounded-lg text-center text-2xl font-bold text-white">
+            <button id="submit" class-=" ">Submit</button>
+        </div>
+
+    </form>
+
+
+    <script>
+        // add the code to display initails
+        document.getElementById('id').innerText = "JO";
+        // add definig the object of array 
+        var hotel = [{ id: 1, roomOverview: "Guest Room", roomType: "Standard Room", Amount: "$50", roomFeature: "Air conditioning", kitchenFeature: "Mini fridge", foodAndBeverages: "24, Hours Service", entertaiment: "Radio", internetAndPhones: "Phones", Status: true }, { id: 2, roomOverview: "Coperate Room", roomType: "Standard Room", Amount: "$1000", roomFeature: "Air conditioning", kitchenFeature: "Mini Gas", foodAndBeverages: "12,Hours Service", entertaiment: "CNN", internetAndPhones: "Wired Internet", Status: false },
+        { id: 3, roomOverview: "Stand Point", roomType: "Standard Room", Amount: "$50", roomFeature: "This room i9s non smoking", kitchenFeature: "Mini fridge", foodAndBeverages: "15, Hours Service", entertaiment: "Movie, Pay per view", internetAndPhones: "Wireless Internet", Status: false }, { id: 4, roomOverview: "Stand Twin Room", roomType: "Capital Oriented", Amount: "$150", roomFeature: "Air conditioning", kitchenFeature: "Mini fridge", foodAndBeverages: "24, Hours Service", entertaiment: "BBC", internetAndPhones: "High Speed internet", Status: true }]
+
+        // assigning a variable to to reference an element in HTML
+        var cardCase = document.getElementById('cardCase')
+        // assigning variables to variouse element to be referenced in our HTML element. by getting there respectives IDs
+        const rooms = document.getElementById('btnRooms')
+        const room = document.getElementById('room')
+        const reserve = document.getElementById('reserves')
+        const form = document.getElementById('form')
+        const formAdd = document.getElementById('formadd')
+        const formA = document.getElementById('formA')
+        const firstname = document.getElementById('firstname')
+        const lastname = document.getElementById('lastname')
+        const submit = document.getElementById('submit')
+        const add = document.getElementById('add')
+
+
+
+
+
+        // var initials = firstName.charAt(0)+secondName.charAt(0)
+        //  document.getElementById('id').innerText=initials
+
+        // add an event listener to variables to nammed rooom to reference the element room
+        room.addEventListener("click", (e) => {
+            e.preventDefault()
+            clearPanel()
+            createRoom(hotel)
+        })
+        // add event listener to the resrve buttion
+        reserves.addEventListener("click", (e) => {
+            e.preventDefault()
+            form.classList.replace("hidden", "block")
+        });
+        // adding aan event listener to intial element 
+        hi.addEventListener("click", (e) => {
+            e.preventDefault()
+            formA.classList.replace("hidden", "block")
+        });
+        // add an event listener to push object of array dynamically
+        add.addEventListener("click", (e) => {
+            e.preventDefault()
+            hotel.push({ roomOverview: "Guest Room", roomType: "Standard Room", Amount: "$50", roomFeature: "Air conditioning", kitchenFeature: "Mini fridge", foodAndBeverages: "24, Hours Service", entertaiment: "Radio", internetAndPhones: "Phones", Status: true }, { roomOverview: "Stand Point", roomType: "Standard Room", Amount: "$50", roomFeature: "This room i9s non smoking", kitchenFeature: "Mini fridge", foodAndBeverages: "15, Hours Service", entertaiment: "Movie, Pay per view", internetAndPhones: "Wireless Internet", Status: false })
+            clearPanel()
+            createRoom(hotel)
+        })
+
+
+
+        const clearPanel = () => {
+
+            // Clear the panel element by removing every child node
+
+            while (cardCase.hasChildNodes()) {
+                cardCase.removeChild(cardCase.firstChild)
+            }
+        }
+        // adding an event listener to the form to add a room dynamically
+        formadd.addEventListener('click', (e) => {
+            e.preventDefault()
+            var data = new FormData(form)
+            var title = data.get('roomOverview')
+            var desc = data.get('desc')
+            var booked = data.get('booked')
+            var date = data.get('date')
+
+            // these add more rooms when ever add room is been clicked
+            var hotel = { roomOverview: GuestRoom, roomType: StandardRoom, Amount: $50, roomFeature: Airconditioning, kitchenFeature: Minifridge, foodAndBeverages: 24, HoursService, entertaiment: Radio, internetAndPhones: Phones, Status: true }
+            tak.push(hotel)
+            alert(JSON.stringify(tak))
+
+            //clearPanel()
+            //createRoom(tak)
+        })
+        //filter the array and create a button the remove a room
+        const btn = document.createElement("button")
+        btn.innerText = "X"
+        btn.addEventListener('click', () => {
+            hotel = hotel.filter((takX) => {
+                return takX.id !== hotel.id
+            })
+            clearPanel()
+            createRoom(hotel)
+        })
+
+
+        const createRoom = (hotel) => {
+
+            for (let tak of hotel) {
+                // Create a div of element to contain the task 
+                const takDiv = document.createElement('div')
+                takDiv.className = "w-56 h-70 space-y-2 bg-teal-600"
+
+                // Create a div of element to contain the title 
+                const titleDiv = document.createElement('div')
+                titleDiv.className = "bg-slate-300 rounded-md w-full"
+
+                // Create a H2 element to contain the task
+                const titleP = document.createElement('h2')
+                titleP.className = "text-2xl text-semibold font-bold text-center"
+                titleP.innerText = tak.roomOverview
+
+                // Create a div of element to contian the standard room type
+                const standDiv = document.createElement('div')
+                standDiv.className = "ml-4 text-white"
+
+                // Create a P element to contain room type
+                const standP = document.createElement('p')
+                standP.className = "w-full"
+                standP.innerText = tak.roomType
+
+                // Create a divv element to contain the price element
+                const priceDiv = document.createElement('div')
+                priceDiv.className = "ml-4 text-white"
+
+                // Create a P element to contain price amount
+                const priceP = document.createElement('p')
+                priceP.className = "w-full"
+                priceP.innerText = tak.Amount
+
+                // Create a div element to contain the feature element
+                const romfDiv = document.createElement('div')
+                romfDiv.className = "ml-4 text-white"
+
+                // Create a H2 element to contain the task
+                const romfP = document.createElement('p')
+                romfP.className = "w-full"
+                romfP.innerText = tak.roomFeature
+
+                // Create a H2 element to contain the h2 element
+                const KitFDiv = document.createElement('div')
+                KitFDiv.className = "ml-4 text-white"
+
+                const kitP = document.createElement('p')
+                kitP.className = "w-full"
+                kitP.innerText = tak.kitchenFeature
+
+                // Create a DIV lement to contain food and beverages
+                const fandBrevDiv = document.createElement('div')
+                fandBrevDiv.className = "ml-4 text-white"
+
+                // Create a p element to contain the food and Beverages
+                const fandBrevP = document.createElement('p')
+                fandBrevP.className = "w-full"
+                fandBrevP.innerText = tak.foodAndBeverages
+
+                // Create a div element to contain entertaiment
+                const enterDiv = document.createElement('div')
+                enterDiv.className = "ml-4 text-white"
+
+                // Create a P element to contain entertaiment
+                const enterP = document.createElement('p')
+                enterP.className = "w-full"
+                enterP.innerText = tak.entertaiment
+
+
+                // Create a DIV element to contain internet and phone
+                const interDiv = document.createElement('div')
+                interDiv.className = "ml-4 text-white"
+
+                
+                // Create a P element to contain internet and phone
+                const interP = document.createElement('p')
+                interP.className = "w-full"
+                interP.innerText = tak.internetAndPhones
+
+                
+                // Create a DIV element to contain Status of room
+                const statusDiv = document.createElement('div')
+                statusDiv.className = "bg-slate-500 border-b-2 border-white p-1"
+
+
+                
+                // Create a P element to contain the status of room
+                const statusP = document.createElement('p')
+                statusP.className = `p-2 rounded-md font-semibold text-md ${tak.Status ? 'bg-green-500' : 'bg-red-500'}`
+                statusP.innerText = `${tak.Status ? 'occupied' : 'notoccupied'}`;
+
+
+                // add the title P element to it div and the title div to task container
+                titleDiv.appendChild(titleP)
+                takDiv.appendChild(titleDiv)
+
+                // add the room type P element to it div and the title div to task container
+                standDiv.appendChild(standP)
+                takDiv.appendChild(standDiv)
+
+                // add the price P element to it div and the title div to task container
+                priceDiv.appendChild(priceP)
+                takDiv.appendChild(priceDiv)
+
+                // add the room feature P element to it div and the room feature div to task container
+                romfDiv.appendChild(romfP)
+                takDiv.appendChild(romfDiv)
+
+                // add the  P element to it div and the title div to task container
+                KitFDiv.appendChild(kitP)
+                takDiv.appendChild(KitFDiv)
+
+                // add the  P element to it div and the fand div to task container
+                KitFDiv.appendChild(kitP)
+                fandBrevDiv.appendChild(fandBrevP)
+                takDiv.appendChild(fandBrevDiv)
+
+                enterDiv.appendChild(enterP)
+                takDiv.appendChild(enterDiv)
+
+                interDiv.appendChild(interP)
+                takDiv.appendChild(interDiv)
+
+                statusDiv.appendChild(statusP)
+                takDiv.appendChild(statusDiv)
+
+                takDiv.appendChild(btn)
+
+
+                cardCase.appendChild(takDiv)
+            
+        }
+        const addRom = () => {
+            hotel.push()
+        }
+
+
+
+        const login=(userId)=>{
+            currentUser=users[0]
+            if(email===currentUser.email && password ===currentUser){
+                formA.style.display="none"
+                fullname=currentUser.name.split(' ')
+                id=fullname[0] +fullname[1]
+                document.getElementById('id').innerText=id.toUpperCase()
+            }
+        }
+    }
+    </script>
+</body>
+
+</html>
